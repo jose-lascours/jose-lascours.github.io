@@ -263,6 +263,15 @@ main {
   box-shadow: 0 16px 28px -10px color-mix(in srgb, var(--color-accent) 70%, transparent);
 }
 
+.hero__cta[aria-disabled="true"],
+.hero__cta[aria-disabled="true"]:hover {
+  background: color-mix(in srgb, var(--color-fg-muted) 30%, var(--color-surface));
+  color: var(--color-fg-muted);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
 footer {
   max-width: var(--max-width);
   margin: 1.75rem auto 0;

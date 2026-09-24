@@ -19,7 +19,8 @@
   <meta name="twitter:title" content="Jose Lascours — Desarrollador Backend">
   <meta name="twitter:description" content="Portfolio de Jose Lascours, desarrollador backend en sistemas de atención de emergencias: PHP, Go, Delphi, bases de datos y GIS.">
   <meta name="twitter:image" content="https://jose-lascours.github.io/assets/og-image.png">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8cff'/%3E%3Ctext x='50' y='66' font-size='50' font-family='sans-serif' fill='%23fff' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/theme.js"></script>
   <script>
@@ -93,7 +94,7 @@
       </section>
 
       <div class="cta">
-        <a class="hero__cta" href="assets/cv.pdf" download data-i18n="hero.cta">Descargar CV</a>
+        <a class="hero__cta" id="cv-download" data-href="assets/cv.pdf" aria-disabled="true" download data-i18n="hero.cta">Descargar CV</a>
       </div>
     </main>
   </div>
@@ -103,6 +104,7 @@
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script src="js/cv.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -110,6 +112,10 @@
     var emailAddress = ['jlascours.quickly314', ['passinbox', 'com'].join('.')].join('@');
     document.getElementById('contact-email').href = 'mailto:' + emailAddress;
     document.getElementById('contact-email-item').hidden = false;
+
+    if (window.CvDownload) {
+      window.CvDownload.initCvDownload(document.getElementById('cv-download'));
+    }
 
     if (window.I18n) {
       var initialLang = window.I18n.initLanguage();

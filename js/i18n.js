@@ -10,8 +10,8 @@
       },
       about: {
         heading: 'Sobre mí',
-        body: 'Soy desarrollador de software y hace 5 años trabajo en una empresa que crea sistemas de atención de emergencias. Los usan centros de despacho 911, fuerzas de seguridad, servicios de emergencias médicas, bomberos y defensa civil, así que es software crítico que tiene que funcionar las 24 horas.',
-        body2: 'Desarrollo y mantengo servicios backend y APIs en PHP y Go, aplicaciones de escritorio en Delphi y componentes de mapas y GIS sobre GeoServer y renderd. En ese trabajo uso la IA como una herramienta más. Me enfoco en integrar el sistema central con servicios satélite y sistemas externos, y en modernizar sistemas heredados. Además, instalo y pongo en marcha mis servicios y APIs en los servidores Linux y Windows de los clientes.',
+        body: 'Desarrollador de software con 5 años de trayectoria en el diseño y mantenimiento de sistemas de misión crítica para centros de despacho 911, fuerzas de seguridad, emergencias médicas, bomberos y defensa civil. Trabajo sobre el núcleo del sistema, los servicios satélite y las integraciones externas. Son sistemas que operan 24/7 con alta concurrencia, por eso pongo el foco en evitar condiciones de carrera, mantener la consistencia de las transacciones cuando algo falla y que los servicios sigan operando.',
+        body2: 'Desarrollo APIs y servicios backend en PHP y Go, aplicaciones de escritorio en Delphi y componentes GIS sobre GeoServer y renderd. Trabajo con bases de datos relacionales (SQL Server, MySQL y PostgreSQL) en todo el ciclo, desde el diseño de esquemas hasta la optimización de consultas y stored procedures. También tengo experiencia en la modernización de sistemas heredados y en el despliegue y la puesta en marcha de servicios sobre infraestructura Linux y Windows Server. Uso la IA como herramienta para agilizar el trabajo de desarrollo.',
       },
       tech: {
         heading: 'Tecnologías',
@@ -30,8 +30,8 @@
       },
       about: {
         heading: 'About me',
-        body: 'I am a software developer, and for the past 5 years I have worked at a company that builds emergency response systems. They are used by 911 dispatch centers, law enforcement, emergency medical services, and fire and civil defense agencies, so the software is mission critical and has to run around the clock.',
-        body2: 'I develop and maintain backend services and APIs in PHP and Go, desktop applications in Delphi, and mapping and GIS components built on GeoServer and renderd. AI is one more tool I use in that work. My focus is on integrating the core system with satellite services and external systems, and on modernizing legacy systems. I also install and set up my services and APIs on clients\' Linux and Windows servers.',
+        body: 'Software developer with 5 years of experience designing and maintaining mission-critical systems for 911 dispatch centers, law enforcement, emergency medical services, fire departments, and civil defense. I work on the system core, satellite services, and external integrations. These systems run 24/7 under high concurrency, so I focus on preventing race conditions, keeping transactions consistent when something fails, and keeping services running.',
+        body2: 'I build APIs and backend services in PHP and Go, desktop applications in Delphi, and GIS components on GeoServer and renderd. I work with relational databases (SQL Server, MySQL, and PostgreSQL) across the whole cycle, from schema design to query and stored procedure optimization. I also have experience modernizing legacy systems and deploying and setting up services on Linux and Windows Server infrastructure. I use AI as a tool to speed up development work.',
       },
       tech: {
         heading: 'Technologies',

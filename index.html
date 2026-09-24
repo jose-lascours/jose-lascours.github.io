@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Lascours — Desarrollador Backend</title>
+  <meta name="description" content="Portfolio de Jose Lascours, desarrollador backend en sistemas de atención de emergencias: PHP, Go, Delphi, bases de datos y GIS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jose-lascours.github.io/">
+  <meta property="og:title" content="Jose Lascours — Desarrollador Backend">
+  <meta property="og:description" content="Portfolio de Jose Lascours, desarrollador backend en sistemas de atención de emergencias: PHP, Go, Delphi, bases de datos y GIS.">
+  <meta property="og:image" content="https://jose-lascours.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jose Lascours, Desarrollador Backend">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jose Lascours — Desarrollador Backend">
+  <meta name="twitter:description" content="Portfolio de Jose Lascours, desarrollador backend en sistemas de atención de emergencias: PHP, Go, Delphi, bases de datos y GIS.">
+  <meta name="twitter:image" content="https://jose-lascours.github.io/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f8cff'/%3E%3Ctext x='50' y='66' font-size='50' font-family='sans-serif' fill='%23fff' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+  <script>
+    if (window.Theme) window.Theme.initTheme();
+  </script>
+</head>
+<body>
+  <div class="page">
+    <div class="page__controls">
+      <button id="theme-toggle" type="button" aria-label="Toggle theme">🌓</button>
+      <button id="lang-toggle" type="button" aria-label="Toggle language">EN</button>
+    </div>
+
+    <header class="hero">
+      <div class="hero__avatar">
+        <img src="assets/avatar.svg" alt="Foto de Jose Lascours" width="120" height="120">
+      </div>
+      <div class="hero__info">
+        <h1 class="hero__name">Jose Lascours</h1>
+        <p class="hero__title" data-i18n="hero.title">Técnico en Análisis y Desarrollo de Software · Desarrollador Backend</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="about">
+        <h2 data-i18n="about.heading">Sobre mí</h2>
+        <p data-i18n="about.body">Soy desarrollador de software y hace 5 años trabajo en una empresa que crea sistemas de atención de emergencias. Los usan centros de despacho 911, fuerzas de seguridad, servicios de emergencias médicas, bomberos y defensa civil, así que es software crítico que tiene que funcionar las 24 horas.</p>
+        <p data-i18n="about.body2">Desarrollo y mantengo servicios backend y APIs en PHP y Go, aplicaciones de escritorio en Delphi y componentes de mapas y GIS sobre GeoServer y renderd. En ese trabajo uso la IA como una herramienta más. Me enfoco en integrar el sistema central con servicios satélite y sistemas externos, y en modernizar sistemas heredados. Además, instalo y pongo en marcha mis servicios y APIs en los servidores Linux y Windows de los clientes.</p>
+      </section>
+
+      <section id="tech" class="tech">
+        <h2 data-i18n="tech.heading">Tecnologías</h2>
+        <ul class="tech__grid">
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/php.svg" alt="PHP"><span>PHP</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/go.svg" alt="Go"><span>Go</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/delphi.svg" alt="Delphi"><span>Delphi (XE8 / 13)</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/microsoftsqlserver.svg" alt="Microsoft SQL Server"><span>SQL Server</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/mysql.svg" alt="MySQL"><span>MySQL</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/postgresql.svg" alt="PostgreSQL"><span>PostgreSQL</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/git.svg" alt="Git"><span>Git</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/github.svg" alt="GitHub"><span>GitHub</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/linux.svg" alt="Linux"><span>Linux</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/windows.svg" alt="Windows Server"><span>Windows Server</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/osgeo.svg" alt="GeoServer"><span>GeoServer</span></li>
+          <li class="tech__item"><img class="tech__icon" src="assets/icons/openstreetmap.svg" alt="renderd (tile server)"><span>renderd (tiles)</span></li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 data-i18n="contact.heading">Contacto</h2>
+        <ul class="contact__list">
+          <li>
+            <a class="contact__link" href="https://github.com/jose-lascours" target="_blank" rel="noopener noreferrer">
+              <img class="contact__icon" src="assets/icons/github.svg" alt="">
+              <span data-i18n="contact.github">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact__link" href="https://www.linkedin.com/in/joselascours" target="_blank" rel="noopener noreferrer">
+              <img class="contact__icon" src="assets/icons/linkedin.svg" alt="">
+              <span data-i18n="contact.linkedin">LinkedIn</span>
+            </a>
+          </li>
+          <li id="contact-email-item" hidden>
+            <a class="contact__link" id="contact-email">
+              <img class="contact__icon" src="assets/icons/email.svg" alt="">
+              <span data-i18n="contact.email">Email</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="cta">
+        <a class="hero__cta" href="assets/cv.pdf" download data-i18n="hero.cta">Descargar CV</a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Jose Lascours</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // La dirección se arma en el cliente para que no figure en el HTML que leen los bots
+    var emailAddress = ['jlascours.quickly314', ['passinbox', 'com'].join('.')].join('@');
+    document.getElementById('contact-email').href = 'mailto:' + emailAddress;
+    document.getElementById('contact-email-item').hidden = false;
+
+    if (window.I18n) {
+      var initialLang = window.I18n.initLanguage();
+      document.getElementById('lang-toggle').textContent = initialLang === 'es' ? 'EN' : 'ES';
+
+      document.getElementById('lang-toggle').addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('lang') === 'es' ? 'es' : 'en';
+        var next = current === 'es' ? 'en' : 'es';
+        window.I18n.setLanguage(next);
+        document.getElementById('lang-toggle').textContent = next === 'es' ? 'EN' : 'ES';
+      });
+    }
+
+    if (window.Theme) {
+      document.getElementById('theme-toggle').addEventListener('click', function () {
+        window.Theme.toggleTheme();
+      });
+    }
+  </script>
+</body>
+</html>

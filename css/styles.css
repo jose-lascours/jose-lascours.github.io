@@ -1,0 +1,284 @@
+:root {
+  --color-bg: #0b0d10;
+  --color-fg: #eaeaea;
+  --color-fg-muted: #a3a9b0;
+  --color-accent: #4f8cff;
+  --color-surface: #14171c;
+  --color-chip: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --radius-full: 999px;
+  --radius-lg: 1.5rem;
+  --radius-md: 0.85rem;
+  --max-width: 760px;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #eef1f5;
+  --color-fg: #14171c;
+  --color-fg-muted: #4a4f57;
+  --color-accent: #2563eb;
+  --color-surface: #ffffff;
+  --color-border: rgba(15, 23, 42, 0.1);
+  --shadow-color: rgba(15, 23, 42, 0.14);
+}
+
+/* Sin JavaScript no hay `data-theme`: seguir la preferencia del sistema
+   cuando el sitio no pudo aplicar ni la preferencia guardada ni la del
+   toggle. Con JS, `initTheme()` fija `data-theme` antes del primer pintado
+   (ver <head> en index.html) y esta regla deja de aplicar. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-bg: #eef1f5;
+    --color-fg: #14171c;
+    --color-fg-muted: #4a4f57;
+    --color-accent: #2563eb;
+    --color-surface: #ffffff;
+    --color-border: rgba(15, 23, 42, 0.1);
+    --shadow-color: rgba(15, 23, 42, 0.14);
+    color-scheme: light;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a { color: inherit; }
+
+button, a {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 20px 45px -20px var(--shadow-color);
+}
+
+.page__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.page__controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.page__controls button:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 20px -10px var(--shadow-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+}
+
+.hero__avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-bg);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+.hero__name {
+  margin: 0.85rem 0 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.hero__title {
+  margin: 0.15rem 0 0;
+  color: var(--color-fg-muted);
+}
+
+main {
+  margin-top: 1.75rem;
+}
+
+.about, .tech, .contact {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-fg) 10%, transparent);
+}
+
+.about h2, .tech h2, .contact h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.about p + p {
+  margin-top: 0.75rem;
+}
+
+.tech__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 1.1rem;
+}
+
+.tech__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-fg-muted);
+}
+
+.tech__icon {
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+  background: var(--color-chip);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  box-shadow: 0 6px 16px -8px var(--shadow-color);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tech__item:hover .tech__icon {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px -8px var(--shadow-color);
+}
+
+.contact__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.75rem;
+  padding: 0 1.1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-full);
+  color: var(--color-fg);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.contact__link:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 20px -10px var(--shadow-color);
+}
+
+.contact__icon {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  background: var(--color-chip);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 2rem;
+  background: linear-gradient(135deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 65%, black));
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  box-shadow: 0 12px 24px -10px color-mix(in srgb, var(--color-accent) 60%, transparent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px -10px color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
+footer {
+  max-width: var(--max-width);
+  margin: 1.75rem auto 0;
+  text-align: center;
+  color: var(--color-fg-muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero__name {
+    margin-top: 0;
+  }
+}
